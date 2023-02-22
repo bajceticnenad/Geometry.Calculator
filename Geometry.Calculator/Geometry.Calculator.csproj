@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>Geometry.Calculator</Title>
+    <Authors>Nenad Bajcetic</Authors>
+    <Company />
+    <Description>Geometry shapes calculator: Area, Perimeter, Angles, Diagonal for 2D (Square, Rectangle, Triangle, Circle, Semicircle, Sector, Ellipse, Trapezoid, Parallelogram, Rhombus) and 3D shapes (in preparation)</Description>
+    <Copyright>$(Authors)</Copyright>
+    <PackageTags>Geometry.Calculator, Geometry, Calculator, Square, Rectangle, Triangle, Circle, Semicircle, Sector, Ellipse, Trapezoid, Parallelogram, Rhombus</PackageTags>
+    <PackageReleaseNotes>v1.0.0
+Geometry Calculations for Square, Rectangle, Triangle, Circle, Semicircle.
+In preparation 3D Shapes and 2D: Sector, Ellipse, Trapezoid, Parallelogram, Rhombus</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+
+</Project>
