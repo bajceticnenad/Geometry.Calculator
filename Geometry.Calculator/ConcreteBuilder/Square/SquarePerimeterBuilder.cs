@@ -10,20 +10,11 @@ using System.Threading.Tasks;
 
 namespace Geometry.Calculator.ConcreteBuilder.Square
 {
-    public class SquareSideBuilder : ISquareBuilder
+    public class SquarePerimeterBuilder : ISquareBuilder
     {
         #region "PrivateFields"
         SquareProduct square = new SquareProduct();
-
-        //private readonly double _side;
         #endregion "PrivateFields"
-
-        #region "PublicConstructor"
-        //public SquareSideBuilder(double side)
-        //{
-        //    _side = side;
-        //}
-        #endregion "PublicConstructor"
 
         #region "PublicMethods"
 
@@ -36,7 +27,11 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Area = SquareFormulas.GetArea(value);
+                if (square.Side == null || square.Side == 0)
+                {
+                    SetSide(value);
+                }
+                square.Area = SquareFormulas.GetArea(square.Side);
             }
             catch
             {
@@ -48,7 +43,11 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Diagonal = SquareFormulas.GetDiagonal(value);
+                if (square.Side == null || square.Side == 0)
+                {
+                    SetSide(value);
+                }
+                square.Diagonal = SquareFormulas.GetDiagonal(square.Side);
             }
             catch
             {
@@ -60,7 +59,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Perimeter = SquareFormulas.GetPerimeter(value);
+                square.Perimeter = value;
             }
             catch
             {
@@ -72,7 +71,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Side = value;
+                square.Side = value / 4;
             }
             catch
             {

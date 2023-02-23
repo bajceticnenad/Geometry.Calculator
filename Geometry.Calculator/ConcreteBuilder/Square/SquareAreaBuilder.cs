@@ -10,20 +10,11 @@ using System.Threading.Tasks;
 
 namespace Geometry.Calculator.ConcreteBuilder.Square
 {
-    public class SquareSideBuilder : ISquareBuilder
+    public class SquareAreaBuilder : ISquareBuilder
     {
         #region "PrivateFields"
         SquareProduct square = new SquareProduct();
-
-        //private readonly double _side;
         #endregion "PrivateFields"
-
-        #region "PublicConstructor"
-        //public SquareSideBuilder(double side)
-        //{
-        //    _side = side;
-        //}
-        #endregion "PublicConstructor"
 
         #region "PublicMethods"
 
@@ -36,7 +27,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Area = SquareFormulas.GetArea(value);
+                square.Area = value;
             }
             catch
             {
@@ -48,7 +39,11 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Diagonal = SquareFormulas.GetDiagonal(value);
+                if (square.Side == null || square.Side == 0)
+                {
+                    SetSide(value);
+                }
+                square.Diagonal = SquareFormulas.GetDiagonal(square.Side);
             }
             catch
             {
@@ -60,7 +55,11 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Perimeter = SquareFormulas.GetPerimeter(value);
+                if (square.Side == null || square.Side == 0)
+                {
+                    SetSide(value);
+                }
+                square.Perimeter = SquareFormulas.GetPerimeter(square.Side);
             }
             catch
             {
@@ -72,7 +71,11 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Side = value;
+                if (value == null)
+                {
+                    throw new Exception("Value a can not be null!");
+                }
+                square.Side = Math.Sqrt(value);
             }
             catch
             {

@@ -16,16 +16,16 @@ namespace Geometry.Calculator
                     var squareSideCreator = new SquareCreator(new SquareSideBuilder(), value);
                     squareSideCreator.CreateSquare();
                     return squareSideCreator.GetSquare();
-                case SquareCalculationType.Area: //TODO: create SquareAreaBuilder
-                    var squareAreaCreator = new SquareCreator(new SquareSideBuilder(), value);
+                case SquareCalculationType.Area:
+                    var squareAreaCreator = new SquareCreator(new SquareAreaBuilder(), value);
                     squareAreaCreator.CreateSquare();
                     return squareAreaCreator.GetSquare();
-                case SquareCalculationType.Diagonal: //TODO: create SquareDiagonalBuilder
-                    var squareDiagonalCreator = new SquareCreator(new SquareSideBuilder(), value);
+                case SquareCalculationType.Diagonal:
+                    var squareDiagonalCreator = new SquareCreator(new SquareDiagonalBuilder(), value);
                     squareDiagonalCreator.CreateSquare();
                     return squareDiagonalCreator.GetSquare();
-                case SquareCalculationType.Perimeter: //TODO: create SquarePerimeterBuilder
-                    var squarePerimeterCreator = new SquareCreator(new SquareSideBuilder(), value);
+                case SquareCalculationType.Perimeter:
+                    var squarePerimeterCreator = new SquareCreator(new SquarePerimeterBuilder(), value);
                     squarePerimeterCreator.CreateSquare();
                     return squarePerimeterCreator.GetSquare();
                 default:
