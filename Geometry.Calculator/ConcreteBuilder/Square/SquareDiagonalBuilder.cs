@@ -71,7 +71,10 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Side = SquareFormulas.GetSide(SquareCalculationType.Diagonal, value);
+                if (square.Side == null || square.Side == 0)
+                {
+                    square.Side = SquareFormulas.GetSide(SquareCalculationType.Diagonal, value);
+                }
             }
             catch
             {
