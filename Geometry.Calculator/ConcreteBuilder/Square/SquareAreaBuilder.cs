@@ -75,7 +75,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
                 {
                     throw new Exception("Value a can not be null!");
                 }
-                square.Side = Math.Sqrt(value);
+                square.Side = SquareFormulas.GetSide(SquareCalculationType.Area, value);
             }
             catch
             {

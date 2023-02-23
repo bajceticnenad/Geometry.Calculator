@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Geometry.Calculator.ConcreteBuilder.Square;
+using Geometry.Calculator.Creator;
+using Geometry.Calculator.Enums;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +24,24 @@ namespace Geometry.Calculator.Helper
         {
             return 4 * side;
         }
+        public static double GetSide(SquareCalculationType squareCalculationType, double value)
+        {
+            switch (squareCalculationType)
+            {
+                case SquareCalculationType.Side:
+                    return value;
+                case SquareCalculationType.Area:
+                    return Math.Sqrt(value);
+                case SquareCalculationType.Diagonal:
+                    return value / Math.Sqrt(2);
+                case SquareCalculationType.Perimeter:
+                    return value / 4;
+                default:
+                    throw new Exception("Unknown Calculation Type!");
+            }
+
+            
+        }
+
     }
 }
