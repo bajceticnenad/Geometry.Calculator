@@ -14,7 +14,7 @@ namespace Geometry.Calculator.Helper
     {
         public static double GetArea(double side)
         {
-            return side * side;
+            return Math.Round(side * side, 4);
         }
         public static double GetDiagonal(double side)
         {
@@ -22,7 +22,7 @@ namespace Geometry.Calculator.Helper
         }
         public static double GetPerimeter(double side)
         {
-            return 4 * side;
+            return Math.Round(4 * side, 4);
         }
         public static double GetSide(SquareCalculationType squareCalculationType, double value)
         {
@@ -31,11 +31,11 @@ namespace Geometry.Calculator.Helper
                 case SquareCalculationType.Side:
                     return value;
                 case SquareCalculationType.Area:
-                    return Math.Sqrt(value);
+                    return Math.Round(Math.Sqrt(value), 4);
                 case SquareCalculationType.Diagonal:
-                    return value / Math.Sqrt(2);
+                    return Math.Round(value / Math.Sqrt(2), 4);
                 case SquareCalculationType.Perimeter:
-                    return value / 4;
+                    return Math.Round(value / 4, 4);
                 default:
                     throw new Exception("Unknown Calculation Type!");
             }
