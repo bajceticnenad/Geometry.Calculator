@@ -33,4 +33,4 @@ var sideAndDiagonal = GeometryShape.GetRectangle(Geometry.Calculator.Enums.Recta
 
 ## Installation
 
-` NuGet\Install-Package Geometry.Calculator -Version 1.0.1 `
+` NuGet\Install-Package Geometry.Calculator `
