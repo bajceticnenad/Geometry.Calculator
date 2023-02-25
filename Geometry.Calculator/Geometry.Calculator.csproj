@@ -25,6 +25,7 @@ Add Readme.md</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/bajceticnenad/Geometry.Calculator</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bajceticnenad/Geometry.Calculator</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
