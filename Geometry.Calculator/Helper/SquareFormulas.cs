@@ -38,9 +38,7 @@ namespace Geometry.Calculator.Helper
                     return Math.Round(value / 4, 4);
                 default:
                     throw new Exception("Unknown Calculation Type!");
-            }
-
-            
+            }      
         }
 
     }
