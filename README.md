@@ -1,5 +1,5 @@
 # Geometry.Calculator
-Nuget (C# library) for Geometry shapes calculator: Area, Perimeter, Angles, Diagonal , Sides, etc...
+### Nuget (C# library) for Geometry shapes calculator: Area, Perimeter, Angles, Diagonal , Sides, etc...
 ### 2D shapes: Square, Rectangle, Triangle, Circle, Semicircle, Sector, Ellipse, Trapezoid, Parallelogram, Rhombus 
 ### 3D shapes: Cube, Pyramid, Sphere,Rectangular, Cylinder, Cone
 
