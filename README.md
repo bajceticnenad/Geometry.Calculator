@@ -34,4 +34,4 @@
 
 ## Installation
 
-` Install-Package Geometry.Calculator `
+` NuGet\Install-Package Geometry.Calculator -Version 1.0.1 `
