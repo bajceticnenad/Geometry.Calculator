@@ -74,10 +74,37 @@ namespace Geometry.Calculator
             }
         }
 
-        //public static ShapeProduct GetCircle(double r)
-        //{
-        //    return new CircleFactory(r).GetGeometryShape();
-        //}
+        public static CircleProduct GetCircle(CircleCalculationType circleCalculationType, double value)
+        {
+            try
+            {
+                switch (circleCalculationType)
+                {
+                    case CircleCalculationType.Radius:
+                        var circleRadiusCreator = new CircleCreator(new CircleRadiusBuilder(), value);
+                        circleRadiusCreator.CreateCircle();
+                        return circleRadiusCreator.GetCircle();
+                    case CircleCalculationType.Area:
+                        var circleAreaCreator = new CircleCreator(new CircleAreaBuilder(), value);
+                        circleAreaCreator.CreateCircle();
+                        return circleAreaCreator.GetCircle();
+                    case CircleCalculationType.Circumference:
+                        var circleCircumferenceCreator = new CircleCreator(new CircleCircumferenceBuilder(), value);
+                        circleCircumferenceCreator.CreateCircle();
+                        return circleCircumferenceCreator.GetCircle();
+                    case CircleCalculationType.Diameter:
+                        var circleDiameterCreator = new CircleCreator(new CircleDiameterBuilder(), value);
+                        circleDiameterCreator.CreateCircle();
+                        return circleDiameterCreator.GetCircle();
+                    default:
+                        throw new Exception("Unknown Calculation Type!");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         //public static ShapeProduct GetSemicircle(double r)
         //{
