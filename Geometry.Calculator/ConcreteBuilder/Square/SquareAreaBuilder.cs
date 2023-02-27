@@ -27,7 +27,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Area = value;
+                square.Area = Math.Round(value, 4);
             }
             catch
             {

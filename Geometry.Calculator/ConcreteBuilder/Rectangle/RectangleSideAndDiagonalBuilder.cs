@@ -48,7 +48,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Rectangle
         {
             try
             {
-                rectangle.Diagonal = otherValue;
+                rectangle.Diagonal = Math.Round(otherValue, 4);
             }
             catch
             {

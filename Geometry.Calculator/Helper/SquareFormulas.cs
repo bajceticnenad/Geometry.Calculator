@@ -26,19 +26,34 @@ namespace Geometry.Calculator.Helper
         }
         public static double GetSide(SquareCalculationType squareCalculationType, double value)
         {
-            switch (squareCalculationType)
+            double side;
+
+            try
             {
-                case SquareCalculationType.Side:
-                    return value;
-                case SquareCalculationType.Area:
-                    return Math.Round(Math.Sqrt(value), 4);
-                case SquareCalculationType.Diagonal:
-                    return Math.Round(value / Math.Sqrt(2), 4);
-                case SquareCalculationType.Perimeter:
-                    return Math.Round(value / 4, 4);
-                default:
-                    throw new Exception("Unknown Calculation Type!");
-            }      
+                switch (squareCalculationType)
+                {
+                    case SquareCalculationType.Side:
+                        side = value;
+                        break;
+                    case SquareCalculationType.Area:
+                        side = Math.Sqrt(value);
+                        break;
+                    case SquareCalculationType.Diagonal:
+                        side = value / Math.Sqrt(2);
+                        break;
+                    case SquareCalculationType.Perimeter:
+                        side = value / 4;
+                        break;
+                    default:
+                        throw new Exception("Unknown Calculation Type!");
+                }
+            }
+            catch
+            {
+                throw;            
+            }
+
+                return Math.Round(side, 4);
         }
 
     }

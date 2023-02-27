@@ -28,7 +28,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Rectangle
         {
             try
             {
-                rectangle.Area = otherValue;
+                rectangle.Area = Math.Round(otherValue, 4);
             }
             catch
             {

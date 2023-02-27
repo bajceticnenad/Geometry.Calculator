@@ -72,7 +72,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Side = value;
+                square.Side = Math.Round(value, 4);
             }
             catch
             {

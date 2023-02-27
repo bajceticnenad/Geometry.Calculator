@@ -59,7 +59,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Perimeter = value;
+                square.Perimeter = Math.Round(value, 4);
             }
             catch
             {

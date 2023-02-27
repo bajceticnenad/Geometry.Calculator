@@ -24,23 +24,57 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
 
         public void SetArea(double value)
         {
-            circle.Area = CircleFormulas.GetArea(CircleCalculationType.Area, value);
+            try
+            {
+                circle.Area = Math.Round(value, 4);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void SetCircumference(double value)
         {
-            circle.Circumference = CircleFormulas.GetCircumference(CircleCalculationType.Area, value);
+            try
+            {
+                circle.Circumference = Math.Round(2 * Math.Sqrt(value * Math.PI), 4);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void SetDiameter(double value)
         {
-            circle.Diameter = CircleFormulas.GetDiametar(CircleCalculationType.Area, value);
+            try
+            {
+                try
+                {
+                    circle.Diameter = Math.Round(2 * Math.Sqrt(value / Math.PI), 4);
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void SetRadius(double value)
         {
-
-            circle.Radius = CircleFormulas.GetRadius(CircleCalculationType.Area, value);
+            try
+            {
+                circle.Radius = Math.Round(Math.Sqrt(value / Math.PI), 4);
+            }
+            catch
+            {
+                throw;
+            }
         }
         #endregion "PublicMethods"
 

@@ -47,21 +47,26 @@ namespace Geometry.Calculator.Helper
         }
         public static double GetWidth(RectangleCalculationType rectangleCalculationType, double a, double b)
         {
+            double width; 
             try
             {
                 switch (rectangleCalculationType)
                 {
                     case RectangleCalculationType.BothSides:
-                        return a > b ? b : a;
+                        width = a > b ? b : a;
+                        break;
                     case RectangleCalculationType.SideAndArea:
                         var side = GetSideFromArea(a, b);
-                        return a > side ? side : a;
+                        width = a > side ? side : a;
+                        break;
                     case RectangleCalculationType.SideAndDiagonal:
                         var sideD = GetSideFromDiagonal(a, b);
-                        return a > sideD ? sideD : a;
+                        width = a > sideD ? sideD : a;
+                        break;
                     case RectangleCalculationType.SideAndPerimeter:
                         var sideP = GetSideFromPerimeter(a, b);
-                        return a > sideP ? sideP : a;
+                        width = a > sideP ? sideP : a;
+                        break;
                     default:
                         throw new Exception("Unknown Calculation Type!");
                 }
@@ -70,24 +75,31 @@ namespace Geometry.Calculator.Helper
             {
                 throw;
             }
+
+            return Math.Round(width, 4);
         }
         public static double GetLength(RectangleCalculationType rectangleCalculationType, double a, double b)
         {
+            double length;
             try
             {
                 switch (rectangleCalculationType)
                 {
                     case RectangleCalculationType.BothSides:
-                        return a > b ? a : b;
+                        length = a > b ? a : b;
+                        break;
                     case RectangleCalculationType.SideAndArea:
                         var side = GetSideFromArea(a, b);
-                        return a > side ? a : side;
+                        length = a > side ? a : side;
+                        break;
                     case RectangleCalculationType.SideAndDiagonal:
                         var sideD = GetSideFromDiagonal(a, b);
-                        return a > sideD ? a : sideD;
+                        length = a > sideD ? a : sideD;
+                        break;
                     case RectangleCalculationType.SideAndPerimeter:
                         var sideP = GetSideFromPerimeter(a, b);
-                        return a > sideP ? a : sideP;
+                        length = a > sideP ? a : sideP;
+                        break;
                     default:
                         throw new Exception("Unknown Calculation Type!");
                 }
@@ -96,6 +108,8 @@ namespace Geometry.Calculator.Helper
             {
                 throw;
             }
+
+            return Math.Round(length, 4);
         }
 
         private static double GetSideFromArea(double side, double area)

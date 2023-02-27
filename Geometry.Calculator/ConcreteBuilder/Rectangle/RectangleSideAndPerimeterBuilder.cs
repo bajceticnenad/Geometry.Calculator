@@ -68,7 +68,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Rectangle
         {
             try
             {
-                rectangle.Perimeter = otherValue;
+                rectangle.Perimeter = Math.Round(otherValue, 4);
             }
             catch
             {

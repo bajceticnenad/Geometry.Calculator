@@ -43,7 +43,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                square.Diagonal = value;
+                square.Diagonal = Math.Round(value, 4);
             }
             catch
             {
