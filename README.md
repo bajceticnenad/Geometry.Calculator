@@ -28,7 +28,30 @@ var sideAndPerimeter = GeometryShape.GetRectangle(Geometry.Calculator.Enums.Rect
 
 //Rectangle SideAndPerimeter
 var sideAndDiagonal = GeometryShape.GetRectangle(Geometry.Calculator.Enums.RectangleCalculationType.SideAndDiagonal, 4, 6.4031);
-          
+
+//Circle radius
+var radius = GeometryShape.GetCircle(Geometry.Calculator.Enums.CircleCalculationType.Radius, 4);
+
+//Circle Area
+var area = GeometryShape.GetCircle(Geometry.Calculator.Enums.CircleCalculationType.Area, 50.265);
+
+//Circle Perimeter
+var perimeter = GeometryShape.GetCircle(Geometry.Calculator.Enums.CircleCalculationType.Circumference, 25.1327);
+
+//Circle diagonal
+var diagonal = GeometryShape.GetCircle(Geometry.Calculator.Enums.CircleCalculationType.Diameter, 8);
+  
+//Semicircle radius
+var radius = GeometryShape.GetSemicircle(Geometry.Calculator.Enums.SemicircleCalculationType.Radius, 1);
+
+//Semicircle Area 
+var area = GeometryShape.GetSemicircle(Geometry.Calculator.Enums.SemicircleCalculationType.Area, 1.5708);
+
+//Semicircle Perimeter 
+var perimeter = GeometryShape.GetSemicircle(Geometry.Calculator.Enums.SemicircleCalculationType.Perimeter, 5.1416);
+
+//Semicircle diameter
+var diameter = GeometryShape.GetSemicircle(Geometry.Calculator.Enums.SemicircleCalculationType.Diameter, 2);
 ```
 
 ## Installation
