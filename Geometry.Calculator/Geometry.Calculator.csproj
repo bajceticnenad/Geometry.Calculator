@@ -15,12 +15,12 @@
     <PackageReleaseNotes>v1.0.0
 Geometry Calculations for Square, Rectangle
 TODO list: 
- - 2D Shapes: Circle, Semicircle, Triangle, Sector, Ellipse, Trapezoid, Parallelogram, Rhombus
+ - 2D Shapes: Triangle, Sector, Ellipse, Trapezoid, Parallelogram, Rhombus
  - 3D Shapes: Cube, Pyramid, Sphere,Rectangular, Cylinder, Cone
 v1.0.1
 Add Readme.md
 v1.0.2
-Ad calculation for Circle and Semicircle</PackageReleaseNotes>
+Add calculation for Circle and Semicircle</PackageReleaseNotes>
     <AssemblyVersion>1.0.2</AssemblyVersion>
     <FileVersion>1.0.2</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
