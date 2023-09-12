@@ -1,12 +1,6 @@
 ﻿using Geometry.Calculator.Builder;
-using Geometry.Calculator.Enums;
 using Geometry.Calculator.Helper;
 using Geometry.Calculator.Product;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Geometry.Calculator.ConcreteBuilder.Square
 {
@@ -26,7 +20,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                semicircle.Area = Math.Round(SemicircleFormulas.GetArea(value/2), 4);
+                semicircle.Area = Math.Round(SemicircleFormulas.GetArea(value / 2), 4);
             }
             catch
             {
@@ -38,7 +32,7 @@ namespace Geometry.Calculator.ConcreteBuilder.Square
         {
             try
             {
-                semicircle.Perimeter = Math.Round(SemicircleFormulas.GetPerimeter(value/2), 4);
+                semicircle.Perimeter = Math.Round(SemicircleFormulas.GetPerimeter(value / 2), 4);
             }
             catch
             {

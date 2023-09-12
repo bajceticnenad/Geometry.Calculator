@@ -2,13 +2,6 @@
 using Geometry.Calculator.Enums;
 using Geometry.Calculator.Helper;
 using Geometry.Calculator.Product;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Geometry.Calculator.ConcreteBuilder.Rectangle
 {

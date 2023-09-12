@@ -2,9 +2,7 @@
 using Geometry.Calculator.ConcreteBuilder.Square;
 using Geometry.Calculator.Creator;
 using Geometry.Calculator.Enums;
-using Geometry.Calculator.Helper;
 using Geometry.Calculator.Product;
-using Newtonsoft.Json.Linq;
 
 namespace Geometry.Calculator
 {
@@ -111,7 +109,7 @@ namespace Geometry.Calculator
             try
             {
                 switch (semicircleCalculationType)
-                { 
+                {
                     case SemicircleCalculationType.Radius:
                         var semicircleRadiusCreator = new SemicircleCreator(new SemicircleRadiusBuilder(), value);
                         semicircleRadiusCreator.CreateSemicircle();

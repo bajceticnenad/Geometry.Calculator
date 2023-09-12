@@ -1,8 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;net7.0;netstandard2.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
     <Title>Geometry.Calculator</Title>
     <Authors>Nenad Bajcetic</Authors>
@@ -20,14 +21,16 @@ TODO list:
 v1.0.1
 Add Readme.md
 v1.0.2
-Add calculation for Circle and Semicircle</PackageReleaseNotes>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+Add calculation for Circle and Semicircle
+v1.0.3
+Add net7.0 and netstandard2.0 as TargetFrameworks</PackageReleaseNotes>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>1.0.3</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/bajceticnenad/Geometry.Calculator</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bajceticnenad/Geometry.Calculator</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
