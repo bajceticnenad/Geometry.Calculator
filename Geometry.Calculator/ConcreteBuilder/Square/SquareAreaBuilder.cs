@@ -2,11 +2,6 @@
 using Geometry.Calculator.Enums;
 using Geometry.Calculator.Helper;
 using Geometry.Calculator.Product;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Geometry.Calculator.ConcreteBuilder.Square
 {

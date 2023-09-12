@@ -1,12 +1,4 @@
 ﻿using Geometry.Calculator.Enums;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Geometry.Calculator.Helper
 {
@@ -47,7 +39,7 @@ namespace Geometry.Calculator.Helper
         }
         public static double GetWidth(RectangleCalculationType rectangleCalculationType, double a, double b)
         {
-            double width; 
+            double width;
             try
             {
                 switch (rectangleCalculationType)

@@ -1,12 +1,4 @@
-﻿using Geometry.Calculator.ConcreteBuilder.Square;
-using Geometry.Calculator.Creator;
-using Geometry.Calculator.Enums;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Geometry.Calculator.Enums;
 
 namespace Geometry.Calculator.Helper
 {
@@ -50,10 +42,10 @@ namespace Geometry.Calculator.Helper
             }
             catch
             {
-                throw;            
+                throw;
             }
 
-                return Math.Round(side, 4);
+            return Math.Round(side, 4);
         }
 
     }
